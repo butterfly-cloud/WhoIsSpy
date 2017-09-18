@@ -1,0 +1,79 @@
+<!--play.wxml-->
+
+<view class="page full_page">
+
+  <view class="table">
+  <view class="tr bg-w">
+    <view class="th">{{round}}局</view>
+    <view class="th">得分</view>
+    <view class="th ">平民</view>
+    <view class="th ">卧底</view>
+    <view class="th ">白板</view>
+    <view class="th ">死亡</view>
+  </view>
+  <block wx:for="{{players}}" wx:for-item="player" wx:key="id">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">
+      <image style="width: 30px; height: 30px; " mode="scaleToFill" src="{{player.path}}" >
+      </image> </view>
+      <view class="td">{{player.score}}</view>
+      <view class="td">{{player.pingmin}}</view>
+      <view class="td">{{player.uc}}</view>
+      <view class="td">{{player.baiban}}</view>
+      <view class="td">{{player.dead}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">
+      <image style="width: 30px; height: 30px; " mode="scaleToFill" src="{{player.path}}" >
+      </image> </view>
+      <view class="td">{{player.score}}</view>
+      <view class="td">{{player.pingmin}}</view>
+      <view class="td">{{player.uc}}</view>
+      <view class="td">{{player.baiban}}</view>
+      <view class="td">{{player.dead}}</view>
+    </view>
+  </block>
+</view>
+     <view class="my_win_winner"></view>
+    <view>
+  <view class="page__bd" >
+      <view class="flex-row row">
+        <view wx:for="{{players}}" wx:for-item="player"  wx:key="id">
+          <view class="flex-view-item hero_name" style="background-color: {{bgc[player.id]}}" bindtap="seeword" data-id="{{player.id}}">
+             <view class="my_identity">{{iden[display_iden[player.id]]}}</view> 
+         
+            <view style="">
+                <image mode="scaleToFill" src="{{player.path}}" >
+                </image> 
+            </view>
+            <view style="padding-bottom:5px;">{{player.name}}</view>
+          </view>
+        </view>
+      </view>
+  </view>
+  
+
+     <view class="flex-row row" style="margin-top:8px">
+     <view class="flex-view-item my_win_text">
+     <text style="display:{{win.winner}}">W\nI\nN\nN\nE\nR\n</text></view>
+   
+    <view class="flex-view-item"> 
+ 
+     <image style="width:130px; height:130px" mode="aspectFill" src="{{win.path}}" ></image>  
+    </view>  
+    </view>
+  </view>
+
+  <view class="weui-flex button" >
+            <view class="weui-flex__item"><button type="default" class="weui-btn" bindtap="toastShow" > 发词 </button></view>
+            <view class="weui-flex__item"><button type="primary" class="weui-btn" bindtap="vote" bindlongpress='identity' > 投票 </button></view>
+            
+            
+        </view>
+
+
+
+
+
+
+</view>

@@ -1,0 +1,61 @@
+<view class="section">
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__bd my_hd_size">
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">说明</view>
+        <view class="weui-media-box__desc my_hd_size">
+          <view>所有图片均来自网络，侵删</view>
+          <view>基于iphone6屏幕尺寸开发</view>
+        </view>
+      </view>
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">规则</view>
+        <view class="weui-media-box__desc my_hd_size">
+          <view>当人数为6人时会有两个卧底</view>
+          <view>如所有卧底及白板出局，则平民获胜</view>
+          <view>如所有卧底出局且白板存活，则白板获胜</view>
+          <view>如卧底在还剩1个平民或白板时存活即获胜</view>
+        </view>
+      </view>
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">操作</view>
+        <view class="weui-media-box__desc my_hd_size">
+          <view>点击<font class="red_btn">发词</font>按钮发词</view>
+          <view>点击<font class="red_btn">人物</font>查看对应词</view>
+          <view>点击<font class="red_btn">投票</font>按钮选择投票对象</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_select " style="padding-left:15px !important">
+      <view class="weui-cell__bd">选择人数</view>
+      <view class="weui-cell__ft">
+        <picker bindchange="bindAccountChange" value="{{index}}" range="{{array}}">
+          <view class="weui-select">{{array[index]}}</view>
+        </picker>
+      </view>
+      
+    </view>
+  </view>
+
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_switch">
+      <view class="weui-cell__bd">启用白板</view>
+      <view class="weui-cell__ft">
+        <switch bindchange="switchChange" />
+      </view>
+    </view>
+  </view>
+  <button type="primary" bindtap="init" catchlongpress='caidan'> 确定 </button>
+  
+ 
+
+</view>
+
+<view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__text">Copyright © 2017-2017 Cloud</view>
+</view>
+

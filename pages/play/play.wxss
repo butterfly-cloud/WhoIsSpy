@@ -1,0 +1,117 @@
+/* play.wxss */
+.hero_name {
+  font-size: 13px;
+  text-align: center;
+  width: 60px;
+  
+}
+.row {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+   /* flex-direction:row;  */
+}
+
+.full_page {
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 100px; */
+}
+
+.button {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+.div {
+  height: 5px;
+}
+
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+
+.td image {
+  vertical-align:middle;
+  width:30px;
+  height: 30px;
+}
+
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+}
+
+.my_hide {
+  display: none;
+}
+
+.my_show {
+  display: block;
+}
+
+.my_identity {
+  height:18px; 
+  color: red;
+  padding-top:3px;
+  padding-bottom:3px; 
+  font-size: 14px;
+}
+
+.hero_name image {
+  width:55px;
+  height: 55px;
+}
+
+.my_win_info {
+  font-size: 18px;
+  text-align: center;
+}
+
+.my_win_winner {
+  background-color: #858585;
+  height: 2px;
+  text-align: center;
+}
+
+.my_win_winner_info {
+  color:#CD2626;
+  margin-top:10px;
+  /* margin-bottom:10px; */
+  text-align:center;
+  /* font-size:30px; */
+}
+
+.my_win_text {
+  text-align:center;
+  color:red;
+  /* margin-top: 5px;  */
+  padding-right: 10px;
+  font-size:18px;
+  font-family:Georgia, serif;
+  font-weight:bold;
+}
